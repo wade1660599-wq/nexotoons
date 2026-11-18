@@ -32,6 +32,35 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 dialog{width:min(520px,92%);border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--text);padding:22px}
 dialog::backdrop{background:#000b}dialog h2{margin-bottom:8px}dialog p{color:var(--muted)}.close{float:right;background:var(--panel2)}
 @media(max-width:520px){.hero{padding-top:38px}.searchrow{flex-direction:column}.searchrow button{width:100%}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cover{height:180px}}
+:root {
+  --bg: #0d0b0f !important;
+  --panel: #171218 !important;
+  --panel2: #241820 !important;
+  --text: #f7f3f5 !important;
+  --muted: #b6aab1 !important;
+  --accent: #f02f50 !important;
+  --line: #34232b !important;
+}
+
+.hero {
+  background: radial-gradient(ellipse at 80% 10%, #55202f, transparent 65%), #1b1017 !important;
+}
+
+.hero h1 span,
+.brand span {
+  color: #ff8da2 !important;
+}
+
+.chip.active,
+.searchrow button {
+  background: #f02f50 !important;
+  color: white !important;
+}
+
+.card {
+  background: #171218 !important;
+  border-color: #34232b !important;
+}
 </style>
 </head>
 <body>
