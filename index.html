@@ -2,89 +2,73 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#10131d">
-<meta name="description" content="NexoToons — discover and read age-appropriate manga.">
-<title>NexoToons — Manga Library</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100b10">
+<title>NexoToons — Discover Your Next Story</title>
 <style>
-:root{--bg:#0d1018;--panel:#171c29;--panel2:#202738;--text:#f4f6fb;--muted:#9aa5ba;--accent:#8b7cff;--line:#2a3244}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
-header{position:sticky;top:0;z-index:5;background:#10131ded;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.wrap{width:min(1120px,92%);margin:auto}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-weight:900;font-size:23px;letter-spacing:-1px}.brand span{color:var(--accent)}.nav small{color:var(--muted)}
-.hero{padding:54px 0 34px;background:radial-gradient(ellipse at 80% 10%,#5546a633,transparent 42%)}
-.eyebrow{color:#b6adff;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
-h1{font-size:clamp(34px,6vw,58px);line-height:1.05;letter-spacing:-2px;margin:12px 0}
-.hero p{max-width:570px;color:var(--muted);margin:0 0 24px}
-.searchrow{display:flex;gap:10px;max-width:650px}.searchrow input{flex:1;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--text);font:inherit;outline:none}
-.searchrow input:focus{border-color:var(--accent)}button,.chip{border:0;border-radius:10px;padding:11px 15px;background:var(--accent);color:white;font-weight:750;cursor:pointer}
-main{padding:22px 0 60px}.sectionhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 16px}
-h2{font-size:21px;margin:0}.muted{color:var(--muted);font-size:13px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 20px}.chip{background:var(--panel2);color:#cbd2e2;padding:8px 13px;font-size:13px}.chip.active{background:#5145a8;color:white}
-.grid{display:grid;grid-template-columns:repeat( auto-fill,minmax(155px,1fr));gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;transition:transform .18s,border-color .18s}
-.card:hover{transform:translateY(-3px);border-color:#7063d5}.cover{height:205px;display:grid;place-items:center;text-align:center;padding:18px;font-size:25px;font-weight:900;letter-spacing:-1px;background:linear-gradient(145deg,#51468f,#202b46 65%,#151a27)}
-.card:nth-child(3n+2) .cover{background:linear-gradient(145deg,#245e67,#25314c 70%,#151a27)}
-.card:nth-child(3n) .cover{background:linear-gradient(145deg,#8a543b,#3d2d4c 70%,#151a27)}
-.cardbody{padding:12px}.card h3{font-size:14px;margin:0 0 4px}.tag{font-size:11px;color:#b6adff}
-.empty{display:none;color:var(--muted);padding:30px;text-align:center;background:var(--panel);border-radius:12px}
-footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}
-dialog{width:min(520px,92%);border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--text);padding:22px}
-dialog::backdrop{background:#000b}dialog h2{margin-bottom:8px}dialog p{color:var(--muted)}.close{float:right;background:var(--panel2)}
-@media(max-width:520px){.hero{padding-top:38px}.searchrow{flex-direction:column}.searchrow button{width:100%}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cover{height:180px}}
-:root {
-  --bg: #0d0b0f !important;
-  --panel: #171218 !important;
-  --panel2: #241820 !important;
-  --text: #f7f3f5 !important;
-  --muted: #b6aab1 !important;
-  --accent: #f02f50 !important;
-  --line: #34232b !important;
-}
-
-.hero {
-  background: radial-gradient(ellipse at 80% 10%, #55202f, transparent 65%), #1b1017 !important;
-}
-
-.hero h1 span,
-.brand span {
-  color: #ff8da2 !important;
-}
-
-.chip.active,
-.searchrow button {
-  background: #f02f50 !important;
-  color: white !important;
-}
-
-.card {
-  background: #171218 !important;
-  border-color: #34232b !important;
-}
+:root{--bg:#100b10;--panel:#1b1219;--panel2:#261720;--line:#39232e;--text:#fff5f7;--muted:#b9a6af;--red:#f04462;--pink:#ff9bad;--deep:#5a1d35}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 36px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(16,11,16,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-size:24px;font-weight:900;letter-spacing:-1px}.brand .nexo{color:#f04444}.brand .toons{color:#ffffff}
+.links{display:flex;gap:25px;color:#d9cbd1;font-weight:650}.links a:hover{color:var(--pink)}
+.navright{display:flex;align-items:center;gap:12px}.search{width:190px;background:#21151e;border:1px solid var(--line);border-radius:12px;padding:10px 13px;color:white;outline:none}.search:focus{border-color:var(--red)}
+.menu{display:none;background:none;border:0;color:white;font-size:24px}
+.hero{margin:28px auto 42px;min-height:310px;border:1px solid #633044;border-radius:25px;overflow:hidden;position:relative;background:radial-gradient(ellipse at 82% 15%,rgba(240,68,98,.48),transparent 42%),radial-gradient(ellipse at 15% 100%,rgba(111,26,62,.65),transparent 48%),linear-gradient(115deg,#24111d,#351426 58%,#170e16);display:flex;align-items:center;padding:48px}
+.hero:after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;right:7%;top:50%;transform:translateY(-50%);border:1px solid rgba(255,180,195,.17);box-shadow:0 0 0 28px rgba(255,180,195,.035),0 0 0 58px rgba(255,180,195,.025)}
+.hero-copy{position:relative;z-index:1;max-width:590px}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#ffc0cc;background:rgba(240,68,98,.14);border:1px solid rgba(255,155,173,.28);padding:7px 12px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+h1{font-size:clamp(36px,6vw,62px);line-height:1.03;letter-spacing:-2px;margin:17px 0 14px}h1 span{color:var(--pink)}.hero p{color:#d5c0c9;max-width:490px;margin:0 0 24px}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:white;padding:12px 18px;border-radius:12px;font-weight:800;box-shadow:0 8px 24px rgba(240,68,98,.2)}.btn:hover{background:#ff5874;transform:translateY(-1px)}
+.btn.secondary{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);box-shadow:none;margin-left:8px}
+.section{margin:38px auto}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:17px;gap:16px}.section h2{font-size:23px;letter-spacing:-.5px;margin:0}.section-head p{color:var(--muted);margin:4px 0 0;font-size:13px}.view{color:var(--pink);font-weight:750;font-size:13px}
+.featured{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.feature-card{min-height:210px;border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;justify-content:end;overflow:hidden;position:relative;background:linear-gradient(125deg,#4a1c32,#1e111a 72%)}
+.feature-card.alt{background:linear-gradient(125deg,#34213c,#17121e 72%)}
+.feature-card:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:8%;top:-45px;background:rgba(255,130,158,.13);filter:blur(2px)}
+.feature-card>*{position:relative}.tag{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#ffb1c0;font-weight:850}.feature-card h3{font-size:25px;margin:8px 0 5px}.feature-card p{margin:0;color:#d3bec7;max-width:340px;font-size:13px}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 18px}.chip{border:1px solid var(--line);background:#1b1219;color:#cbb9c1;padding:8px 14px;border-radius:30px;font-size:12px;font-weight:750;cursor:pointer}.chip.active,.chip:hover{background:var(--red);border-color:var(--red);color:white}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}.card{min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#a3435d;box-shadow:0 12px 30px #0005}
+.cover{height:190px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;text-align:center;padding:15px;font-weight:950;font-size:24px;letter-spacing:-1px;text-shadow:0 3px 15px #0008}
+.cover:before,.cover:after{content:"";position:absolute;border-radius:50%;border:1px solid #ffffff38;width:150px;height:150px}.cover:after{width:210px;height:210px}
+.cover span{position:relative;z-index:1;max-width:130px}.c1{background:linear-gradient(145deg,#9c3150,#351626 65%,#160e16)}.c2{background:linear-gradient(145deg,#365d79,#182738 65%,#111720)}.c3{background:linear-gradient(145deg,#92613c,#39231e 65%,#171014)}.c4{background:linear-gradient(145deg,#684e9c,#2b1e46 65%,#14101d)}.c5{background:linear-gradient(145deg,#39765e,#18382f 65%,#101a17)}.c6{background:linear-gradient(145deg,#a64c38,#48211f 65%,#1b1012)}.c7{background:linear-gradient(145deg,#3d6a9c,#1c2b4b 65%,#11121d)}.c8{background:linear-gradient(145deg,#a04d78,#48213c 65%,#1b1019)}
+.info{padding:12px}.info h3{font-size:14px;margin:0 0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}.status{color:#ff9bad}
+.updates{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.update{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:14px;display:flex;justify-content:space-between;gap:12px}.update strong{font-size:13px}.update small{display:block;color:var(--muted);margin-top:4px}.chapter{color:var(--pink);font-size:12px;white-space:nowrap}
+.empty{display:none;color:var(--muted);padding:24px;text-align:center;border:1px dashed var(--line);border-radius:14px}
+footer{border-top:1px solid #30202a;margin-top:55px;padding:26px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.links{gap:14px}.search{width:150px}}
+@media(max-width:600px){.wrap{width:min(100% - 24px,1160px)}.nav{height:62px}.links{display:none}.menu{display:block}.search{width:135px;padding:9px}.brand{font-size:21px}.hero{padding:28px 23px;min-height:290px;margin-top:18px}.hero:after{right:-90px;opacity:.5}h1{font-size:42px}.featured{grid-template-columns:1fr}.feature-card{min-height:170px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.cover{height:170px}.updates{grid-template-columns:1fr}.section{margin:30px auto}.section h2{font-size:20px}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><div class="brand">NEXO<span>TOONS</span></div><small>Discover • Explore • Read</small></div></header>
-<section class="hero"><div class="wrap"><div class="eyebrow">Your manga corner</div><h1>Stories worth<br>turning pages for.</h1><p>Explore a growing library of age-appropriate manga and discover your next favorite story.</p><div class="searchrow"><input id="search" type="search" placeholder="Search manga titles..." aria-label="Search manga"><button id="searchBtn">Search</button></div></div></section>
-<main class="wrap">
-<div class="sectionhead"><h2>Explore Library</h2><span class="muted" id="count"></span></div>
-<div class="filters" id="filters"><button class="chip active" data-filter="All">All</button><button class="chip" data-filter="Adventure">Adventure</button><button class="chip" data-filter="Fantasy">Fantasy</button><button class="chip" data-filter="Comedy">Comedy</button><button class="chip" data-filter="Sports">Sports</button></div>
-<div class="grid" id="grid">
-<article class="card" data-title="Skybound Journey" data-category="Adventure" data-desc="A young explorer sets out across floating islands to map an unknown world."><div class="cover">SKYBOUND<br>JOURNEY</div><div class="cardbody"><h3>Skybound Journey</h3><div class="tag">Adventure · Sample title</div></div></article>
-<article class="card" data-title="The Crystal Garden" data-category="Fantasy" data-desc="Two friends uncover a mysterious garden where every crystal holds a forgotten tale."><div class="cover">THE CRYSTAL<br>GARDEN</div><div class="cardbody"><h3>The Crystal Garden</h3><div class="tag">Fantasy · Sample title</div></div></article>
-<article class="card" data-title="Laughing Days" data-category="Comedy" data-desc="A cheerful school club turns ordinary afternoons into unforgettable adventures."><div class="cover">LAUGHING<br>DAYS</div><div class="cardbody"><h3>Laughing Days</h3><div class="tag">Comedy · Sample title</div></div></article>
-<article class="card" data-title="Final Whistle" data-category="Sports" data-desc="A new team learns to work together and chase a shared goal on the field."><div class="cover">FINAL<br>WHISTLE</div><div class="cardbody"><h3>Final Whistle</h3><div class="tag">Sports · Sample title</div></div></article>
-<article class="card" data-title="Moonlit Map" data-category="Adventure" data-desc="A hand-drawn map leads a group of friends toward a hidden mountain library."><div class="cover">MOONLIT<br>MAP</div><div class="cardbody"><h3>Moonlit Map</h3><div class="tag">Adventure · Sample title</div></div></article>
-<article class="card" data-title="Little Star Alchemist" data-category="Fantasy" data-desc="An apprentice learns that patience and kindness are the most powerful ingredients."><div class="cover">LITTLE STAR<br>ALCHEMIST</div><div class="cardbody"><h3>Little Star Alchemist</h3><div class="tag">Fantasy · Sample title</div></div></article>
-</div><div class="empty" id="empty">No titles found. Try another search.</div>
+<header><div class="wrap nav">
+<a class="brand" href="#"><span class="nexo">Nexo</span><span class="toons">Toons</span></a>
+<nav class="links"><a href="#home">Home</a><a href="#featured">Featured</a><a href="#library">Library</a><a href="#updates">Updates</a></nav>
+<div class="navright"><input class="search" id="search" type="search" placeholder="Search titles..." aria-label="Search titles"><button class="menu" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('show')">☰</button></div>
+</div></header>
+<main class="wrap" id="home">
+<section class="hero"><div class="hero-copy"><div class="eyebrow">✦ Your next story starts here</div><h1>Discover worlds.<br><span>Read beyond.</span></h1><p>Explore exciting manga, follow new chapters, and keep your favorite stories in one place.</p><a class="btn" href="#library">Explore Library <span>→</span></a><a class="btn secondary" href="#updates">Latest Updates</a></div></section>
+<section class="section" id="featured"><div class="section-head"><div><h2>Featured Stories</h2><p>Handpicked adventures to get you started</p></div><a class="view" href="#library">Explore all →</a></div>
+<div class="featured"><article class="feature-card"><span class="tag">Editor's pick · Adventure</span><h3>Crimson Horizon</h3><p>A new journey begins beyond the edge of the known world.</p></article><article class="feature-card alt"><span class="tag">Trending · Fantasy</span><h3>Moonlit Archive</h3><p>Every forgotten page hides a world waiting to be found.</p></article></div></section>
+<section class="section" id="library"><div class="section-head"><div><h2>Explore Library</h2><p>Find a story that matches your mood</p></div></div>
+<div class="filters"><button class="chip active" data-filter="all">All</button><button class="chip" data-filter="action">Action</button><button class="chip" data-filter="fantasy">Fantasy</button><button class="chip" data-filter="adventure">Adventure</button><button class="chip" data-filter="comedy">Comedy</button></div>
+<div class="grid" id="cards">
+<article class="card" data-title="Crimson Horizon" data-genre="adventure"><div class="cover c1"><span>CRIMSON<br>HORIZON</span></div><div class="info"><h3>Crimson Horizon</h3><div class="meta"><span>Adventure</span><span class="status">Ongoing</span></div></div></article>
+<article class="card" data-title="Skybound" data-genre="action"><div class="cover c2"><span>SKY<br>BOUND</span></div><div class="info"><h3>Skybound</h3><div class="meta"><span>Action</span><span class="status">Ongoing</span></div></div></article>
+<article class="card" data-title="Golden Ember" data-genre="fantasy"><div class="cover c3"><span>GOLDEN<br>EMBER</span></div><div class="info"><h3>Golden Ember</h3><div class="meta"><span>Fantasy</span><span class="status">Completed</span></div></div></article>
+<article class="card" data-title="Moonlit Archive" data-genre="fantasy"><div class="cover c4"><span>MOONLIT<br>ARCHIVE</span></div><div class="info"><h3>Moonlit Archive</h3><div class="meta"><span>Fantasy</span><span class="status">Ongoing</span></div></div></article>
+<article class="card" data-title="Greenwood Days" data-genre="comedy"><div class="cover c5"><span>GREENWOOD<br>DAYS</span></div><div class="info"><h3>Greenwood Days</h3><div class="meta"><span>Comedy</span><span class="status">Ongoing</span></div></div></article>
+<article class="card" data-title="Ember Knights" data-genre="action"><div class="cover c6"><span>EMBER<br>KNIGHTS</span></div><div class="info"><h3>Ember Knights</h3><div class="meta"><span>Action</span><span class="status">Ongoing</span></div></div></article>
+<article class="card" data-title="Blue Meridian" data-genre="adventure"><div class="cover c7"><span>BLUE<br>MERIDIAN</span></div><div class="info"><h3>Blue Meridian</h3><div class="meta"><span>Adventure</span><span class="status">Completed</span></div></div></article>
+<article class="card" data-title="Rosebound" data-genre="fantasy"><div class="cover c8"><span>ROSE<br>BOUND</span></div><div class="info"><h3>Rosebound</h3><div class="meta"><span>Fantasy</span><span class="status">Ongoing</span></div></div></article>
+</div><div class="empty" id="empty">No titles found. Try another search.</div></section>
+<section class="section" id="updates"><div class="section-head"><div><h2>Latest Updates</h2><p>Recently updated chapters</p></div><a class="view" href="#library">View library →</a></div>
+<div class="updates"><div class="update"><div><strong>Crimson Horizon</strong><small>Updated recently</small></div><span class="chapter">Chapter 18</span></div><div class="update"><div><strong>Moonlit Archive</strong><small>Updated recently</small></div><span class="chapter">Chapter 12</span></div><div class="update"><div><strong>Skybound</strong><small>Updated recently</small></div><span class="chapter">Chapter 09</span></div></div></section>
 </main>
-<footer><div class="wrap">© <span id="year"></span> NexoToons. Demo library — add only content you own or are authorized to publish.</div></footer>
-<dialog id="detail"><button class="close" id="close">Close</button><div class="eyebrow">Manga details</div><h2 id="detailTitle"></h2><p id="detailDesc"></p><div class="muted">Demo entry. Chapter pages can be added for authorized, age-appropriate works.</div></dialog>
+<footer><div class="wrap foot"><span>© 2026 NexoToons. All rights reserved.</span><span>Discover · Read · Enjoy</span></div></footer>
 <script>
-const cards=[...document.querySelectorAll('.card')], search=document.querySelector('#search'), empty=document.querySelector('#empty'), count=document.querySelector('#count');let category='All';
-function update(){const q=search.value.trim().toLowerCase();let shown=0;cards.forEach(c=>{const ok=c.dataset.title.toLowerCase().includes(q)&&(category==='All'||c.dataset.category===category);c.style.display=ok?'':'none';if(ok)shown++});count.textContent=shown+' titles';empty.style.display=shown?'none':'block'}
-document.querySelector('#filters').addEventListener('click',e=>{const b=e.target.closest('button[data-filter]');if(!b)return;category=b.dataset.filter;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===b));update()});
-search.addEventListener('input',update);document.querySelector('#searchBtn').addEventListener('click',update);
-const dlg=document.querySelector('#detail');cards.forEach(c=>c.addEventListener('click',()=>{document.querySelector('#detailTitle').textContent=c.dataset.title;document.querySelector('#detailDesc').textContent=c.dataset.desc;dlg.showModal()}));document.querySelector('#close').addEventListener('click',()=>dlg.close());document.querySelector('#year').textContent=new Date().getFullYear();update();
+const search=document.getElementById('search'), cards=[...document.querySelectorAll('.card')], chips=[...document.querySelectorAll('.chip')], empty=document.getElementById('empty');let active='all';
+function filter(){let q=search.value.trim().toLowerCase(),shown=0;cards.forEach(c=>{let ok=(active==='all'||c.dataset.genre===active)&&c.dataset.title.toLowerCase().includes(q);c.style.display=ok?'':'none';if(ok)shown++});empty.style.display=shown?'none':'block'}
+search.addEventListener('input',filter);chips.forEach(b=>b.addEventListener('click',()=>{chips.forEach(x=>x.classList.remove('active'));b.classList.add('active');active=b.dataset.filter;filter()}));
 </script>
 </body></html>
