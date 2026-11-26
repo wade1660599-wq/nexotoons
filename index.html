@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,17 +7,14 @@
 <title>NexoToons — Discover Your Next Story</title>
 <style>
 :root{--bg:#09080d;--panel:#17141d;--red:#f20b35;--text:#f7f4f8;--muted:#b7afc0;--line:#302a38}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,Arial,sans-serif}
-button,input{font:inherit}
-button{cursor:pointer}
+button,input{font:inherit}button{cursor:pointer}
 .wrap{width:min(1200px,calc(100% - 32px));margin:auto}
 header{position:sticky;top:0;z-index:10;background:#09080df2;border-bottom:1px solid #292431;backdrop-filter:blur(12px)}
 .nav{min-height:58px;display:flex;align-items:center;gap:30px}
 .brand{font-size:27px;font-style:italic;font-weight:950;letter-spacing:-1.2px;text-decoration:none;color:#fff;white-space:nowrap}
-.brand b{color:var(--red)}
-.links{display:flex;align-self:stretch;gap:25px}
+.brand b{color:var(--red)}.links{display:flex;align-self:stretch;gap:25px}
 .links a{display:flex;align-items:center;color:#e5dfe9;text-decoration:none;padding:0 3px;border-bottom:3px solid transparent}
 .links a:first-child{color:var(--red);border-color:var(--red)}
 .tools{margin-left:auto;display:flex;gap:9px}
@@ -27,48 +23,35 @@ header{position:sticky;top:0;z-index:10;background:#09080df2;border-bottom:1px s
 .btn.alt{background:#211c29;border:1px solid #686071;color:#fff}
 .hero{margin:0 auto 22px;min-height:312px;border:1px solid #a5233d;border-radius:22px;overflow:hidden;position:relative;background:#100d16 url('hero-banner.jpg') center/cover no-repeat;display:flex;align-items:center;padding:28px}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,7,12,.96),rgba(8,7,12,.78) 32%,rgba(8,7,12,.06) 70%)}
-.hero-content{position:relative;z-index:1;max-width:500px}
-.hero h1{font-size:clamp(34px,5vw,50px);line-height:1.04;margin:8px 0 12px;letter-spacing:-1px}
-.hero h1 em{color:var(--red);font-style:normal}
-.hero p{color:#f0eaf3;max-width:480px;margin:0 0 14px}
+.hero-content{position:relative;z-index:1;max-width:500px}.hero h1{font-size:clamp(34px,5vw,50px);line-height:1.04;margin:8px 0 12px;letter-spacing:-1px}
+.hero h1 em{color:var(--red);font-style:normal}.hero p{color:#f0eaf3;max-width:480px;margin:0 0 14px}
 .eyebrow{color:#ff3156;font-size:13px;font-weight:900;letter-spacing:1.5px}
-.hero-dots{display:flex;gap:10px;margin-top:20px}
-.hero-dots i{width:12px;height:12px;border-radius:50%;background:#51485a}
-.hero-dots i:first-child{background:var(--red)}
-.section{margin:22px auto 30px}
-.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:13px}
+.hero-dots{display:flex;gap:10px;margin-top:20px}.hero-dots i{width:12px;height:12px;border-radius:50%;background:#51485a}.hero-dots i:first-child{background:var(--red)}
+.section{margin:22px auto 30px}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:13px}
 .head h2{margin:0;font-size:22px;line-height:1.2;border-left:5px solid var(--red);padding-left:12px}
-.muted{color:var(--muted);font-size:13px}
-.head .muted{display:block;margin:4px 0 0 17px}
+.muted{color:var(--muted);font-size:13px}.head .muted{display:block;margin:4px 0 0 17px}
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0}
 .chip{border:1px solid #393241;background:#17141e;color:#eee8f1;border-radius:28px;padding:8px 17px}
 .chip.active{background:var(--red);border-color:var(--red);color:white}
 .grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
 .card{cursor:pointer;min-width:0;background:#17141d;border:1px solid #302a38;border-radius:13px;overflow:hidden;transition:transform .18s,border-color .18s}
 .card:hover{transform:translateY(-3px);border-color:#8f2940}
-.cover{aspect-ratio:1/0.94;overflow:hidden;background:#211b29}
-.cover img{width:100%;height:100%;object-fit:cover;display:block}
-.card-info{padding:8px 10px 9px}
-.card h3{font-size:14px;line-height:1.2;margin:0 0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cover{aspect-ratio:1/0.94;overflow:hidden;background:#211b29}.cover img{width:100%;height:100%;object-fit:cover;display:block}
+.card-info{padding:8px 10px 9px}.card h3{font-size:14px;line-height:1.2;margin:0 0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card:first-child h3{white-space:normal;min-height:34px}
 .updates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .update{display:flex;gap:12px;padding:7px;background:#17141d;border:1px solid #302a38;border-radius:12px;cursor:pointer;min-width:0;align-items:center}
-.update:hover{border-color:#8f2940}
-.mini{width:100px;height:68px;flex-shrink:0;border-radius:8px;overflow:hidden}
-.mini img{width:100%;height:100%;object-fit:cover}
-.update-copy{min-width:0;flex:1}
+.update:hover{border-color:#8f2940}.mini{width:100px;height:68px;flex-shrink:0;border-radius:8px;overflow:hidden}
+.mini img{width:100%;height:100%;object-fit:cover}.update-copy{min-width:0;flex:1}
 .update h3{font-size:13px;line-height:1.25;margin:0 0 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .update p{font-size:12px;color:#d3cad8;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .arrow{color:var(--red);font-size:28px;font-weight:800;padding:0 8px}
 .empty{text-align:center;padding:28px;background:var(--panel);border-radius:12px;color:var(--muted)}
 footer{border-top:1px solid #302a38;margin-top:38px;padding:22px 0;color:var(--muted);font-size:12px;background:linear-gradient(100deg,#160b12,#09080d 40%,#120a12)}
-.foot{display:flex;align-items:center;gap:20px}
-.foot .brand{font-size:26px}
-.foot-links{margin-left:auto;display:flex;gap:18px}
+.foot{display:flex;align-items:center;gap:20px}.foot .brand{font-size:26px}.foot-links{margin-left:auto;display:flex;gap:18px}
 .foot-links a{color:#c9c1ce;text-decoration:none}
 .modal{display:none;position:fixed;inset:0;z-index:30;background:#050407ed;overflow:auto;padding:14px}
-.modal.open{display:block}
-.modalbox{max-width:900px;margin:20px auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.modal.open{display:block}.modalbox{max-width:900px;margin:20px auto;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .modalhead{display:flex;justify-content:space-between;padding:14px;border-bottom:1px solid var(--line)}
 .close{background:#2a202b;border:0;color:white;border-radius:8px;padding:8px}
 .detail{display:grid;grid-template-columns:180px 1fr;gap:20px;padding:18px}
@@ -98,415 +81,126 @@ footer{border-top:1px solid #302a38;margin-top:38px;padding:22px 0;color:var(--m
 .reader-shell:fullscreen .reader-scroll{height:calc(100vh - 145px)}
 @media(max-width:900px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.hero{min-height:290px}}
 @media(max-width:620px){
-.nav{padding:7px 0;gap:12px;flex-wrap:wrap}
-.brand{font-size:23px}
-.links{gap:15px;height:35px;order:3;width:100%}
-.tools{margin-left:auto}
-.search{width:145px;padding:8px}
-.tools .btn{padding:8px 10px}
+.nav{padding:7px 0;gap:12px;flex-wrap:wrap}.brand{font-size:23px}
+.links{gap:15px;height:35px;order:3;width:100%}.tools{margin-left:auto}
+.search{width:145px;padding:8px}.tools .btn{padding:8px 10px}
 .hero{min-height:300px;padding:20px 16px;background-position:58% center}
 .hero:before{background:linear-gradient(90deg,rgba(8,7,12,.96),rgba(8,7,12,.74) 50%,rgba(8,7,12,.08))}
-.hero h1{font-size:36px}
-.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.card-info{padding:7px}
-.card h3{font-size:12px}
-.card:first-child h3{min-height:30px}
-.updates{grid-template-columns:1fr}
-.mini{width:86px;height:65px}
-.update{gap:9px}
-.detail{grid-template-columns:95px 1fr;gap:12px;padding:12px}
-.chapters{grid-template-columns:1fr}
-.modal{padding:6px}
-.modalbox{margin:7px auto}
-.foot{flex-wrap:wrap}
+.hero h1{font-size:36px}.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.card-info{padding:7px}.card h3{font-size:12px}.card:first-child h3{min-height:30px}
+.updates{grid-template-columns:1fr}.mini{width:86px;height:65px}.update{gap:9px}
+.detail{grid-template-columns:95px 1fr;gap:12px;padding:12px}.chapters{grid-template-columns:1fr}
+.modal{padding:6px}.modalbox{margin:7px auto}.foot{flex-wrap:wrap}
 .foot-links{width:100%;margin:0;justify-content:space-between}
 .reader-shell{grid-template-columns:1fr;min-height:95vh}
 .reader-side{max-height:150px;border-right:0;border-bottom:1px solid var(--line);padding:10px}
-.reader-side-label{margin:8px 0}
-.reader-chapter-list{display:flex;gap:6px;overflow-x:auto}
+.reader-side-label{margin:8px 0}.reader-chapter-list{display:flex;gap:6px;overflow-x:auto}
 .reader-chapter{width:auto;white-space:nowrap;flex-shrink:0}
 .reader-top{align-items:flex-start;flex-direction:column;padding:12px}
-.reader-scroll{height:calc(75vh - 155px)}
-.reader-bottom{padding:10px}
+.reader-scroll{height:calc(75vh - 155px)}.reader-bottom{padding:10px}
 .reader-bottom .btn{padding:8px 10px;font-size:12px}
 }
 </style>
 </head>
 <body>
-<header>
-<div class="wrap nav">
+<header><div class="wrap nav">
 <a class="brand" href="#home"><b>Nexo</b>Toons</a>
-<nav class="links">
-<a href="#home">⌂ Home</a>
-<a href="#library">Library</a>
-<a href="#updates">Updates</a>
-</nav>
-<div class="tools">
-<input class="search" id="search" placeholder="Search series...">
-<button class="btn" id="searchBtn">Search</button>
-</div>
-</div>
-</header>
-
+<nav class="links"><a href="#home">⌂ Home</a><a href="#library">Library</a><a href="#updates">Updates</a></nav>
+<div class="tools"><input class="search" id="search" placeholder="Search series..."><button class="btn" id="searchBtn">Search</button></div>
+</div></header>
 <main class="wrap" id="home">
-<section class="hero">
-<div class="hero-content">
+<section class="hero"><div class="hero-content">
 <div class="eyebrow">YOUR NEXT STORY STARTS HERE</div>
 <h1>Discover worlds.<br>Read <em>beyond.</em></h1>
 <p>Explore adventure, fantasy, action and more in the NexoToons library.</p>
-<a class="btn" href="#library">▣ Explore Library</a>
-<a class="btn alt" href="#updates">◉ Latest Updates</a>
+<a class="btn" href="#library">▣ Explore Library</a> <a class="btn alt" href="#updates">◉ Latest Updates</a>
 <div class="hero-dots"><i></i><i></i><i></i></div>
-</div>
-</section>
-
-<section class="section" id="library">
-<div class="head">
-<div><h2>Explore Library</h2><span class="muted">Choose a series to view its chapters</span></div>
-<span class="muted" id="count"></span>
-</div>
-<div class="filters" id="filters"></div>
-<div class="grid" id="seriesGrid"></div>
-<div class="empty" id="empty" hidden>No series found.</div>
-</section>
-
-<section class="section" id="updates">
-<div class="head">
-<div><h2>Latest Updates</h2><span class="muted">Recently added chapters</span></div>
-</div>
-<div class="updates" id="updatesGrid"></div>
-</section>
+</div></section>
+<section class="section" id="library"><div class="head">
+<div><h2>Explore Library</h2><span class="muted">Choose a series to view its chapters</span></div><span class="muted" id="count"></span>
+</div><div class="filters" id="filters"></div><div class="grid" id="seriesGrid"></div><div class="empty" id="empty" hidden>No series found.</div></section>
+<section class="section" id="updates"><div class="head"><div><h2>Latest Updates</h2><span class="muted">Recently added chapters</span></div></div><div class="updates" id="updatesGrid"></div></section>
 </main>
-
-<footer>
-<div class="wrap foot">
-<a class="brand" href="#home"><b>Nexo</b>Toons</a>
-<span>© <span id="year"></span> NexoToons. Discover, read and enjoy.</span>
-<nav class="foot-links">
-<a href="#about">About</a><a href="#contact">Contact</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a>
-<a href="https://github.com">●</a><a href="https://youtube.com">▶</a>
-</nav>
-</div>
-</footer>
-
-<div class="modal" id="detailModal">
-<div class="modalbox">
-<div class="modalhead"><b>Series Details</b><button class="close" data-close="detailModal">Close ✕</button></div>
-<div id="detailContent"></div>
-</div>
-</div>
-
-<div class="modal" id="readerModal">
-<div class="reader-shell">
-<aside class="reader-side">
-<div class="reader-side-top"><b id="sideSeries">NexoToons</b><button class="close" data-close="readerModal">✕</button></div>
-<div class="reader-side-label">CHAPTERS</div>
-<div id="readerChapterList" class="reader-chapter-list"></div>
-</aside>
-<section class="reader-main">
-<div class="reader-top">
-<div>
-<div class="eyebrow">NOW READING</div>
-<b id="readerHeading">Reader</b>
-<div class="muted" id="readerSubtitle"></div>
-</div>
-<div class="reader-tools">
-<button class="toolbtn" id="zoomOut">−</button>
-<span id="zoomLabel">100%</span>
-<button class="toolbtn" id="zoomIn">+</button>
-<button class="toolbtn" id="fitWidth">Fit</button>
-<button class="toolbtn" id="fullscreen">Fullscreen</button>
-</div>
-</div>
-<div class="reader-scroll" id="readerScroll"><div class="pages" id="readerPages"></div></div>
-<div class="reader-bottom">
-<button class="btn alt" id="prev">← Previous</button>
-<span class="muted" id="chapterCounter"></span>
-<button class="btn" id="next">Next Chapter →</button>
-</div>
-</section>
-</div>
-</div>
-
+<footer><div class="wrap foot">
+<a class="brand" href="#home"><b>Nexo</b>Toons</a><span>© <span id="year"></span> NexoToons. Discover, read and enjoy.</span>
+<nav class="foot-links"><a href="#about">About</a><a href="#contact">Contact</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="https://github.com">●</a><a href="https://youtube.com">▶</a></nav>
+</div></footer>
+<div class="modal" id="detailModal"><div class="modalbox">
+<div class="modalhead"><b>Series Details</b><button class="close" data-close="detailModal">Close ✕</button></div><div id="detailContent"></div>
+</div></div>
+<div class="modal" id="readerModal"><div class="reader-shell">
+<aside class="reader-side"><div class="reader-side-top"><b id="sideSeries">NexoToons</b><button class="close" data-close="readerModal">✕</button></div>
+<div class="reader-side-label">CHAPTERS</div><div id="readerChapterList" class="reader-chapter-list"></div></aside>
+<section class="reader-main"><div class="reader-top"><div><div class="eyebrow">NOW READING</div><b id="readerHeading">Reader</b><div class="muted" id="readerSubtitle"></div></div>
+<div class="reader-tools"><button class="toolbtn" id="zoomOut">−</button><span id="zoomLabel">100%</span><button class="toolbtn" id="zoomIn">+</button><button class="toolbtn" id="fitWidth">Fit</button><button class="toolbtn" id="fullscreen">Fullscreen</button></div>
+</div><div class="reader-scroll" id="readerScroll"><div class="pages" id="readerPages"></div></div>
+<div class="reader-bottom"><button class="btn alt" id="prev">← Previous</button><span class="muted" id="chapterCounter"></span><button class="btn" id="next">Next Chapter →</button></div>
+</section></div></div>
 <script>
 const SERIES=[
-{
-id:"the-voyagers-red-compass",
-title:"THE VOYAGERS: RED COMPASS",
-burmeseTitle:"ခရီးစွန့်စားသူများ — အနီရောင် သံလိုက်အိမ်မြှောင်",
-genre:"Adventure",
-displayGenre:"Adventure · Fantasy",
-tagline:"This is... the journey we've been waiting for!",
-status:"Ongoing",
-cover:"the-voyagers-red-compass.jpg",
-description:"A crew follows a mysterious red compass toward an island missing from every map.",
-chapters:[
-{
-title:"Chapter 1 — The Compass That Shouldn't Exist",
-burmeseTitle:"မရှိသင့်တဲ့ သံလိုက်အိမ်မြှောင်",
-pages:[
-"chapter1-01.jpg",
-"chapter1-02.jpg",
-"chapter1-03.jpg",
-"chapter1-04.jpg",
-"chapter1-05.jpg",
-"chapter1-06.jpg",
-"chapter1-07.jpg",
-"chapter1-08.jpg",
-"chapter1-09.jpg",
-"chapter1-10.jpg"
-]
-}
-]
-},
-{
-id:"crimson-horizon",
-title:"Crimson Horizon",
-genre:"Adventure",status:"Ongoing",cover:"crimson-horizon.jpg",
-description:"A new journey begins beyond the edge of the known world.",
-chapters:[
-{title:"Chapter 1 — A New Beginning",pages:[]},
-{title:"Chapter 2 — The Red Awakening",pages:[]}
-]
-},
-{
-id:"skybound",
-title:"Skybound",
-genre:"Action",status:"Ongoing",cover:"skybound.jpg",
-description:"A young explorer follows a mysterious signal across floating islands.",
-chapters:[{title:"Chapter 1 — The Broken Sky",pages:[]}]
-},
-{
-id:"golden-ember",
-title:"Golden Ember",
-genre:"Fantasy",status:"Ongoing",cover:"golden-ember.jpg",
-description:"An ancient promise awakens in a kingdom built around a golden flame.",
-chapters:[{title:"Chapter 1 — The Phoenix's Oath",pages:[]}]
-},
-{
-id:"moonlit-archive",
-title:"Moonlit Archive",
-genre:"Fantasy",status:"Completed",cover:"moonlit-archive.jpg",
-description:"The library of forgotten pages hides a world waiting to be found.",
-chapters:[{title:"Chapter 1 — The Forbidden Library",pages:[]}]
-},
-{
-id:"greenwood",
-title:"Greenwood",
-genre:"Comedy",status:"Ongoing",cover:"greenwood.jpg",
-description:"A lively group of friends discovers unexpected magic in a quiet town.",
-chapters:[{title:"Chapter 1 — The Whispering Forest",pages:[]}]
-},
-{
-id:"ember-knights",
-title:"Ember Knights",
-genre:"Action",status:"Ongoing",cover:"ember-knights.jpg",
-description:"A new generation protects the city of embers.",
-chapters:[{title:"Chapter 1 — The Last Flame",pages:[]}]
-},
-{
-id:"blue-meridian",
-title:"Blue Meridian",
-genre:"Adventure",status:"Ongoing",cover:"blue-meridian.jpg",
-description:"A voyage across the blue frontier changes everything.",
-chapters:[{title:"Chapter 1 — The Ocean's Secret",pages:[]}]
-},
-{
-id:"rosebound",
-title:"Rosebound",
-genre:"Fantasy",status:"Ongoing",cover:"rosebound.jpg",
-description:"A hidden garden holds the key to an old magical mystery.",
-chapters:[{title:"Chapter 1 — A New Beginning",pages:[]}]
-}
+{id:"the-voyagers-red-compass",title:"THE VOYAGERS: RED COMPASS",burmeseTitle:"ခရီးစွန့်စားသူများ — အနီရောင် သံလိုက်အိမ်မြှောင်",genre:"Adventure",displayGenre:"Adventure · Fantasy",tagline:"This is... the journey we've been waiting for!",status:"Ongoing",cover:"the-voyagers-red-compass.jpg",description:"A crew follows a mysterious red compass toward an island missing from every map.",chapters:[{title:"Chapter 1 — The Compass That Shouldn't Exist",burmeseTitle:"မရှိသင့်တဲ့ သံလိုက်အိမ်မြှောင်",pages:["chapter1-01.jpg","chapter1-02.jpg","chapter1-03.jpg","chapter1-04.jpg","chapter1-05.jpg","chapter1-06.jpg","chapter1-07.jpg","chapter1-08.jpg","chapter1-09.jpg","chapter1-10.jpg"]}]},
+{id:"crimson-horizon",title:"Crimson Horizon",genre:"Adventure",status:"Ongoing",cover:"crimson-horizon.jpg",description:"A new journey begins beyond the edge of the known world.",chapters:[{title:"Chapter 1 — A New Beginning",pages:[]},{title:"Chapter 2 — The Red Awakening",pages:[]}]},
+{id:"skybound",title:"Skybound",genre:"Action",status:"Ongoing",cover:"skybound.jpg",description:"A young explorer follows a mysterious signal across floating islands.",chapters:[{title:"Chapter 1 — The Broken Sky",pages:[]}]},
+{id:"golden-ember",title:"Golden Ember",genre:"Fantasy",status:"Ongoing",cover:"golden-ember.jpg",description:"An ancient promise awakens in a kingdom built around a golden flame.",chapters:[{title:"Chapter 1 — The Phoenix's Oath",pages:[]}]},
+{id:"moonlit-archive",title:"Moonlit Archive",genre:"Fantasy",status:"Completed",cover:"moonlit-archive.jpg",description:"The library of forgotten pages hides a world waiting to be found.",chapters:[{title:"Chapter 1 — The Forbidden Library",pages:[]}]},
+{id:"greenwood",title:"Greenwood",genre:"Comedy",status:"Ongoing",cover:"greenwood.jpg",description:"A lively group of friends discovers unexpected magic in a quiet town.",chapters:[{title:"Chapter 1 — The Whispering Forest",pages:[]}]},
+{id:"ember-knights",title:"Ember Knights",genre:"Action",status:"Ongoing",cover:"ember-knights.jpg",description:"A new generation protects the city of embers.",chapters:[{title:"Chapter 1 — The Last Flame",pages:[]}]},
+{id:"blue-meridian",title:"Blue Meridian",genre:"Adventure",status:"Ongoing",cover:"blue-meridian.jpg",description:"A voyage across the blue frontier changes everything.",chapters:[{title:"Chapter 1 — The Ocean's Secret",pages:[]}]},
+{id:"rosebound",title:"Rosebound",genre:"Fantasy",status:"Ongoing",cover:"rosebound.jpg",description:"A hidden garden holds the key to an old magical mystery.",chapters:[{title:"Chapter 1 — A New Beginning",pages:[]}]}
 ];
-
 const $=id=>document.getElementById(id);
 let genre="All",selected=null,chapterIndex=0,zoom=100;
 const genres=["All",...new Set(SERIES.map(s=>s.genre))];
 $("year").textContent=new Date().getFullYear();
-
-function safe(v){
-return String(v??"").replace(/[&<>"']/g,c=>({
-"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
-}[c]));
-}
-
-function cover(s){
-return `<img src="${safe(s.cover)}" alt="${safe(s.title)} cover" loading="lazy">`;
-}
-
-function drawFilters(){
-$("filters").innerHTML=genres.map(g=>
-`<button class="chip ${g===genre?"active":""}" data-genre="${safe(g)}">${safe(g)}</button>`
-).join("");
-}
-
+function safe(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function cover(s){return `<img src="${safe(s.cover)}" alt="${safe(s.title)} cover" loading="lazy">`;}
+function drawFilters(){$("filters").innerHTML=genres.map(g=>`<button class="chip ${g===genre?"active":""}" data-genre="${safe(g)}">${safe(g)}</button>`).join("");}
 function drawLibrary(){
-let q=$("search").value.toLowerCase().trim();
-let a=SERIES.filter(s=>
-(genre==="All"||s.genre===genre)&&
-`${s.title} ${s.burmeseTitle||""} ${s.genre} ${s.description}`.toLowerCase().includes(q)
-);
-$("seriesGrid").innerHTML=a.map(s=>
-`<article class="card" data-open="${safe(s.id)}">
-<div class="cover">${cover(s)}</div>
-<div class="card-info">
-<h3>${safe(s.title)}</h3>
-<span class="muted">${safe(s.genre)} · ${s.chapters.length} chapters</span>
-</div>
-</article>`
-).join("");
-$("count").textContent=a.length+" series";
-$("empty").hidden=a.length>0;
+const q=$("search").value.toLowerCase().trim();
+const a=SERIES.filter(s=>(genre==="All"||s.genre===genre)&&`${s.title} ${s.burmeseTitle||""} ${s.genre} ${s.description}`.toLowerCase().includes(q));
+$("seriesGrid").innerHTML=a.map(s=>`<article class="card" data-open="${safe(s.id)}"><div class="cover">${cover(s)}</div><div class="card-info"><h3>${safe(s.title)}</h3><span class="muted">${safe(s.genre)} · ${s.chapters.length} chapters</span></div></article>`).join("");
+$("count").textContent=a.length+" series";$("empty").hidden=a.length>0;
 }
-
 function drawUpdates(){
-$("updatesGrid").innerHTML=SERIES.flatMap(s=>
-s.chapters.map((c,i)=>({s,c,i}))
-).reverse().slice(0,10).map(x=>
-`<div class="update" data-open="${safe(x.s.id)}" data-ch="${x.i}">
-<div class="mini"><img src="${safe(x.s.cover)}" alt=""></div>
-<div class="update-copy">
-<h3>${safe(x.s.title)}</h3>
-<p>${safe(x.c.title)}</p>
-<p>${safe(x.s.genre)} · ${safe(x.s.status)}</p>
-</div>
-<span class="arrow">›</span>
-</div>`
-).join("");
+$("updatesGrid").innerHTML=SERIES.flatMap(s=>s.chapters.map((c,i)=>({s,c,i}))).reverse().slice(0,10).map(x=>
+`<div class="update" data-open="${safe(x.s.id)}" data-ch="${x.i}"><div class="mini"><img src="${safe(x.s.cover)}" alt=""></div><div class="update-copy"><h3>${safe(x.s.title)}</h3><p>${safe(x.c.title)}</p><p>${safe(x.s.genre)} · ${safe(x.s.status)}</p></div><span class="arrow">›</span></div>`).join("");
 }
-
 function openSeries(id){
-selected=SERIES.find(s=>s.id===id);
-if(!selected)return;
-
-$("detailContent").innerHTML=`
-<div class="detail">
-<div class="detailcover">${cover(selected)}</div>
-<div>
-<h2>${safe(selected.title)}</h2>
-${selected.burmeseTitle?`<p class="burmese-title">${safe(selected.burmeseTitle)}</p>`:""}
-<p class="muted">${safe(selected.displayGenre||selected.genre)} · ${safe(selected.status)}</p>
-${selected.tagline?`<p class="tagline">"${safe(selected.tagline)}"</p>`:""}
-<p>${safe(selected.description)}</p>
-<b>Chapters (${selected.chapters.length})</b>
-<div class="chapters">
-${selected.chapters.map((c,i)=>
-`<button class="chapter" data-read="${i}">
-${safe(c.title)}
-${c.burmeseTitle?`<small>${safe(c.burmeseTitle)}</small>`:""}
-</button>`
-).join("")}
-</div>
-</div>
-</div>`;
+selected=SERIES.find(s=>s.id===id);if(!selected)return;
+$("detailContent").innerHTML=`<div class="detail"><div class="detailcover">${cover(selected)}</div><div><h2>${safe(selected.title)}</h2>${selected.burmeseTitle?`<p class="burmese-title">${safe(selected.burmeseTitle)}</p>`:""}<p class="muted">${safe(selected.displayGenre||selected.genre)} · ${safe(selected.status)}</p>${selected.tagline?`<p class="tagline">"${safe(selected.tagline)}"</p>`:""}<p>${safe(selected.description)}</p><b>Chapters (${selected.chapters.length})</b><div class="chapters">${selected.chapters.map((c,i)=>`<button class="chapter" data-read="${i}">${safe(c.title)}${c.burmeseTitle?`<small>${safe(c.burmeseTitle)}</small>`:""}</button>`).join("")}</div></div></div>`;
 $("detailModal").classList.add("open");
 }
-
 function chapterNav(){
 $("sideSeries").textContent=selected.title;
-$("readerChapterList").innerHTML=selected.chapters.map((c,i)=>
-`<button class="reader-chapter ${i===chapterIndex?"active":""}" data-chapter="${i}">
-${safe(c.title)}
-</button>`
-).join("");
+$("readerChapterList").innerHTML=selected.chapters.map((c,i)=>`<button class="reader-chapter ${i===chapterIndex?"active":""}" data-chapter="${i}">${safe(c.title)}</button>`).join("");
 $("chapterCounter").textContent=`Chapter ${chapterIndex+1} / ${selected.chapters.length}`;
 }
-
-function applyZoom(){
-$("readerPages").style.width=zoom+"%";
-$("zoomLabel").textContent=zoom+"%";
-}
-
+function applyZoom(){$("readerPages").style.width=zoom+"%";$("zoomLabel").textContent=zoom+"%";}
 function openReader(i){
 if(!selected||!selected.chapters.length)return;
-chapterIndex=Math.max(0,Math.min(i,selected.chapters.length-1));
-let c=selected.chapters[chapterIndex];
-
-$("readerHeading").textContent=selected.title;
-$("readerSubtitle").textContent=c.title+(c.burmeseTitle?" — "+c.burmeseTitle:"");
-
-$("readerPages").innerHTML=c.pages.length?
-c.pages.map((p,n)=>
-`<img src="${safe(p)}" alt="${safe(c.title)} page ${n+1}" loading="${n<2?"eager":"lazy"}">`
-).join("") :
-`<div class="empty" style="margin:25px">Chapter pages haven't been added yet.</div>`;
-
-chapterNav();
-$("readerScroll").scrollTop=0;
-$("detailModal").classList.remove("open");
-$("readerModal").classList.add("open");
-applyZoom();
+chapterIndex=Math.max(0,Math.min(i,selected.chapters.length-1));const c=selected.chapters[chapterIndex];
+$("readerHeading").textContent=selected.title;$("readerSubtitle").textContent=c.title+(c.burmeseTitle?" — "+c.burmeseTitle:"");
+$("readerPages").innerHTML=c.pages.length?c.pages.map((p,n)=>`<img src="${safe(p)}" alt="${safe(c.title)} page ${n+1}" loading="${n<2?"eager":"lazy"}">`).join(""):`<div class="empty" style="margin:25px">Chapter pages haven't been added yet.</div>`;
+chapterNav();$("readerScroll").scrollTop=0;$("detailModal").classList.remove("open");$("readerModal").classList.add("open");applyZoom();
 }
-
-function close(id){
-$(id).classList.remove("open");
-}
-
+function close(id){$(id).classList.remove("open");}
 document.addEventListener("click",e=>{
-let g=e.target.closest("[data-genre]");
-if(g){
-genre=g.dataset.genre;
-drawFilters();
-drawLibrary();
-return;
-}
-
-let o=e.target.closest("[data-open]");
-if(o){
-openSeries(o.dataset.open);
-if(o.dataset.ch!==undefined)openReader(+o.dataset.ch);
-return;
-}
-
-let r=e.target.closest("[data-read]");
-if(r){
-openReader(+r.dataset.read);
-return;
-}
-
-let n=e.target.closest("[data-chapter]");
-if(n){
-openReader(+n.dataset.chapter);
-return;
-}
-
-let c=e.target.closest("[data-close]");
-if(c)close(c.dataset.close);
+const g=e.target.closest("[data-genre]");if(g){genre=g.dataset.genre;drawFilters();drawLibrary();return;}
+const o=e.target.closest("[data-open]");if(o){openSeries(o.dataset.open);if(o.dataset.ch!==undefined)openReader(Number(o.dataset.ch));return;}
+const r=e.target.closest("[data-read]");if(r){openReader(Number(r.dataset.read));return;}
+const n=e.target.closest("[data-chapter]");if(n){openReader(Number(n.dataset.chapter));return;}
+const c=e.target.closest("[data-close]");if(c)close(c.dataset.close);
 });
-
 $("search").addEventListener("input",drawLibrary);
 $("searchBtn").onclick=()=>$("library").scrollIntoView({behavior:"smooth"});
-$("prev").onclick=()=>openReader(chapterIndex-1);
-$("next").onclick=()=>openReader(chapterIndex+1);
-
-$("zoomIn").onclick=()=>{
-zoom=Math.min(180,zoom+10);
-applyZoom();
-};
-
-$("zoomOut").onclick=()=>{
-zoom=Math.max(50,zoom-10);
-applyZoom();
-};
-
-$("fitWidth").onclick=()=>{
-zoom=100;
-applyZoom();
-};
-
-$("fullscreen").onclick=()=>{
-let el=document.querySelector(".reader-shell");
-document.fullscreenElement?
-document.exitFullscreen?.():
-el.requestFullscreen?.();
-};
-
-["detailModal","readerModal"].forEach(id=>
-$(id).addEventListener("click",e=>{
-if(e.target.id===id)close(id);
-})
-);
-
-document.addEventListener("keydown",e=>{
-if(e.key==="Escape")["detailModal","readerModal"].forEach
+$("prev").onclick=()=>openReader(chapterIndex-1);$("next").onclick=()=>openReader(chapterIndex+1);
+$("zoomIn").onclick=()=>{zoom=Math.min(180,zoom+10);applyZoom();};
+$("zoomOut").onclick=()=>{zoom=Math.max(50,zoom-10);applyZoom();};
+$("fitWidth").onclick=()=>{zoom=100;applyZoom();};
+$("fullscreen").onclick=()=>{const el=document.querySelector(".reader-shell");document.fullscreenElement?document.exitFullscreen?.():el.requestFullscreen?.();};
+["detailModal","readerModal"].forEach(id=>$(id).addEventListener("click",e=>{if(e.target.id===id)close(id);}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")["detailModal","readerModal"].forEach(close);});
+drawFilters();drawLibrary();drawUpdates();
+</script>
+</body>
+</html>
